@@ -1,0 +1,1259 @@
+<title>Inge Loock UGC</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Inge Loock is a Gold Coast UGC creator and brand strategist making lifestyle content for resorts, stays, hospitality, fashion and beauty brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: an editorial travel and lifestyle magazine. Full bleed imagery, a large serif voice, quiet sans for detail, one oxblood accent used sparingly. */
+:root{
+  --paper:#F1EEEA; --paper-2:#E8E2DB; --ink:#1D1916; --muted:#6F665F; --line:#D4CBC2;
+  --wine:#650D1B; --on-wine:#F7EEEA; --night:#1A1614; --form:#FBF8F5; --form-line:#D9CFC6; --accent-text:#7E1424; --chip:#F1E4E1; --on-night:#EDE6DF; --on-night-muted:#A79C93;
+  --serif:"Instrument Serif","Times New Roman",Georgia,serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --wrap:1240px;
+  color-scheme:light;
+}
+/* Always the light, editorial look, whatever the device or app theme. */
+:root,:root[data-theme="dark"]{color-scheme:light}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+a{color:inherit}
+img{display:block;max-width:100%}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(60px,10vw,140px)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1;margin:0;text-wrap:balance}
+h2{font-size:clamp(44px,6.2vw,92px)}
+h2 em,h1 em{font-style:italic}
+h3{font-size:clamp(26px,2.4vw,34px);line-height:1.05}
+.label{font:500 11px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:clamp(18px,1.5vw,20px);line-height:1.7;color:var(--muted);max-width:56ch}
+.orn{color:var(--wine);font-size:1.3em;line-height:0;vertical-align:-.06em;font-style:normal}
+:focus-visible{outline:1.5px solid var(--wine);outline-offset:4px}
+
+/* buttons: still on hover, colour only */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:18px 28px;text-decoration:none;border:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn-wine{background:var(--wine);border-color:var(--wine);color:var(--on-wine)}
+.btn-wine:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn-light{border-color:rgba(255,255,255,.8);color:#fff}
+.btn-light:hover{background:#fff;color:#1D1916}
+.link{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:6px;transition:color .2s,border-color .2s}
+.link:hover,.link:focus-visible{color:var(--accent-text);border-color:var(--wine)}
+.link:active{color:var(--wine);border-bottom-width:2px}
+:is(.results,.book,footer,.proof) .link:hover,:is(.results,.book,footer,.proof) .link:focus-visible{color:#E59CA4;border-color:#E59CA4}
+:is(.results,.book,footer,.proof) .link:active{color:#F0B9BF}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px;gap:16px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.logo{font:400 28px/1 var(--serif);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.logo em{font-style:italic}
+.logo i{display:inline-block;width:.25em;height:.25em;border-radius:50%;background:var(--wine);margin-left:.16em;vertical-align:baseline}
+.nav .btn{padding:13px 18px;font-size:11px}
+.nav-r{justify-self:end;display:flex;align-items:center;gap:14px}
+.menu-btn{display:none;width:40px;height:40px;border:0;background:transparent;cursor:pointer;position:relative;padding:0;flex:none}
+.menu-btn span{position:absolute;left:9px;right:9px;height:1.25px;border-radius:1px;background:var(--ink);transition:transform .25s,top .25s,opacity .2s}
+.menu-btn span:nth-child(1){top:13px}
+.menu-btn span:nth-child(2){top:19px}
+.menu-btn span:nth-child(3){top:25px}
+.menu-open .menu-btn span:nth-child(1){top:19px;transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){opacity:0}
+.menu-open .menu-btn span:nth-child(3){top:19px;transform:rotate(-45deg)}
+.mmenu{border-top:1px solid var(--line);background:var(--paper);padding:14px 20px 22px;max-height:calc(100svh - 68px);overflow:auto}
+.mmenu .label{margin:4px 0 8px}
+.mmenu a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.mmenu a span{font:400 24px/1.1 var(--serif)}
+.mmenu a small{font-size:12px;color:var(--muted);text-align:right}
+.mmenu a:hover span,.mmenu a:active span{color:var(--wine)}
+@media (min-width:901px){.mmenu{display:none!important}}
+@media (max-width:900px){.nav .wrap{grid-template-columns:auto 1fr}.nav ul{display:none}.logo{justify-self:start}.menu-btn{display:block}}
+@media (max-width:380px){.nav .btn{padding:12px 12px;letter-spacing:.14em}.logo{font-size:25px}}
+
+/* hero: full bleed triptych */
+.hero{position:relative;color:#fff;background:#1D1916}
+.trip{display:grid;grid-template-columns:1fr 1.25fr 1fr;height:clamp(560px,62vw,820px)}
+.trip figure{margin:0;position:relative;overflow:hidden}
+.trip img{width:100%;height:100%;object-fit:cover}
+.trip figure:nth-child(1) img{object-position:50% 55%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,15,12,.82) 0%,rgba(20,15,12,.25) 45%,rgba(20,15,12,.1) 70%,rgba(20,15,12,.35) 100%);pointer-events:none}
+.hero-copy{position:absolute;inset:auto 0 0 0;z-index:2;padding-block:0 clamp(36px,5vw,64px)}
+.hero-copy .label{color:rgba(255,255,255,.78)}
+.hero-copy .wrap{max-width:none;padding-left:max(20px,4vw,env(safe-area-inset-left,0px));padding-right:max(20px,4vw,env(safe-area-inset-right,0px))}
+.hero h1{font-size:calc((100vw - 8vw) / 12.1);line-height:.95;margin-top:18px;max-width:none;white-space:nowrap}
+@media (max-width:699px){.hero h1{font-size:calc((100vw - 8vw) / 6.25);white-space:normal;text-wrap:balance}}
+.hero p.sub{margin-top:22px;max-width:none;font-size:clamp(17px,1.9vw,26px);line-height:1.5;color:rgba(255,255,255,.88);text-wrap:pretty}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .btn-wine:hover{background:#fff;border-color:#fff;color:#1D1916}
+@media (max-width:760px){
+  .trip{display:block;height:auto}
+  .trip figure{display:none}
+  .trip figure:nth-child(2){display:block;aspect-ratio:3/4;max-height:74svh;width:100%}
+  .trip figure:nth-child(2) video{object-position:50% 40%}
+  .hero::after{display:none}
+  .hero-copy{position:relative;padding-block:22px 30px;background:#1D1916}
+  .hero h1{margin-top:12px}
+  .hero p.sub{font-size:16px;line-height:1.55;margin-top:14px}
+  .hero-ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .hero-ctas .btn{padding:16px 10px;font-size:11px;letter-spacing:.16em}
+  .hide-sm{display:none}
+}
+
+/* brands */
+/* proof strip */
+.proof{background:var(--night);color:var(--on-night);border-top:1px solid color-mix(in srgb,var(--on-night) 14%,transparent)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:clamp(44px,6vw,80px)}
+.proof div{display:grid;gap:10px;text-align:center;align-content:start}
+.proof b{font:400 clamp(56px,6.4vw,96px)/1 var(--serif);font-variant-numeric:tabular-nums}
+.proof small{font:italic 400 clamp(16px,1.4vw,19px)/1.2 var(--serif);color:#E59CA4;margin-top:-2px}
+.proof span{font:500 clamp(10px,.9vw,12px)/1.35 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-night-muted)}
+@media (max-width:560px){.proof .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 12px;padding-block:48px}}
+
+.brands{background:var(--wine);color:var(--on-wine);padding-block:clamp(32px,3.4vw,44px);overflow:hidden}
+.brands .label{color:color-mix(in srgb,var(--on-wine) 72%,transparent)}
+.brands span.b::before{background:color-mix(in srgb,var(--on-wine) 70%,transparent)!important}
+.brands .wrap{text-align:center}
+.brands .label{margin-bottom:clamp(20px,2.2vw,28px)}
+.brands .wrap{max-width:none;padding-left:0;padding-right:0}
+.brand-track{display:flex;width:max-content;animation:brandroll 55s linear infinite}
+.brand-set,.brand-set.dup{display:flex;flex-wrap:nowrap;white-space:nowrap;align-items:baseline}
+.brand-set span.b:first-child::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;background:var(--wine);transform:translate(-50%,-50%)}
+.brands:hover .brand-track{animation-play-state:paused}
+@media (max-width:760px){.brands{padding-block:30px}.brand-track{animation-duration:40s}}
+@keyframes brandroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.brand-track{animation:none;overflow-x:auto;width:auto}.brand-set.dup{display:none}}
+.brands span.b{font:italic 400 clamp(22px,2.3vw,30px)/1.2 var(--serif);padding-inline:clamp(14px,2vw,28px);position:relative}
+.brands span.b+span.b::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;background:var(--wine);transform:translate(-50%,-50%)}
+
+/* intro statement */
+.intro{text-align:center}
+.intro p.big{font:400 clamp(30px,3.6vw,52px)/1.18 var(--serif);max-width:24ch;margin-inline:auto;text-wrap:balance}
+.intro p.big em{color:var(--wine)}
+.intro .label{margin-bottom:28px}
+.intro .sig{margin-top:30px;color:var(--muted)}
+@media (min-width:1024px){.intro p.big{max-width:none;font-size:clamp(28px,2.75vw,40px)}}
+
+/* work */
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:44px}
+.head > div{min-width:0}
+.head .label{margin-bottom:18px}
+.filters{display:flex;flex-wrap:wrap;gap:4px 22px}
+.filters button{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;background:none;border:0;border-bottom:1px solid transparent;padding:8px 0;color:var(--muted);cursor:pointer;transition:color .2s,border-color .2s}
+.filters button:hover{color:var(--ink)}
+.filters button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--wine)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 22px}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}.card .cap b{font-size:19px}.card .cap small{font-size:13px}}
+.card{display:grid;gap:14px;text-decoration:none;min-width:0;align-content:start}
+.card .ph{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--paper-2)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.035)}
+@media (prefers-reduced-motion:reduce){.card img{transition:none}.card:hover img{transform:none}}
+.card .play{position:absolute;right:12px;bottom:12px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.85);display:grid;place-items:center;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);background:rgba(0,0,0,.18)}
+.card .play svg{width:10px;height:10px;fill:#fff;margin-left:2px}
+.card .cap{display:grid;gap:4px}
+.card .cap .row{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:baseline;gap:4px 10px}
+.card .cap .row b{min-width:0;text-wrap:balance}
+.card .cap .row .n{flex:none;text-align:right;margin-left:auto}
+@media (max-width:640px){.card .cap .row{flex-wrap:wrap}}
+.card .cap b{font:400 22px/1.1 var(--serif)}
+.card .cap .n{font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--wine);white-space:nowrap;font-variant-numeric:tabular-nums}
+.card .cap small{font-size:14px;color:var(--muted);line-height:1.4}
+.note{margin-top:44px;font-size:15px;color:var(--muted);text-align:center}
+
+/* case study */
+.case{background:var(--paper-2)}
+.case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,96px);align-items:center}
+@media (max-width:900px){.case-grid{grid-template-columns:1fr}}
+.case-media{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+.case-media a{display:block;overflow:hidden;aspect-ratio:4/5}
+.case-media img{width:100%;height:100%;object-fit:cover}
+.case-media.mosaic2 .col{display:grid;gap:12px;align-content:start;min-width:0}
+.case-media.mosaic2 .col a{aspect-ratio:auto}
+.case-media.mosaic2 .tall{aspect-ratio:2/3!important}
+.case-media.mosaic2 .sq{aspect-ratio:4/5!important}
+.case .lede{margin-top:24px}
+.case-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px;padding-top:20px;border-top:1px solid var(--ink)}
+@media (max-width:520px){.case-facts{grid-template-columns:1fr}}
+.case-facts span{display:block;font:500 10px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.case-facts b{font:400 20px/1.2 var(--serif);font-weight:400}
+.quote{margin-top:30px;padding-left:22px;border-left:1px solid var(--wine);font:italic 400 clamp(22px,2vw,28px)/1.35 var(--serif);max-width:32ch}
+.case .link{display:inline-block;margin-top:30px}
+
+/* rise */
+.rise{padding-top:clamp(72px,10vw,140px)}
+.rise-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media (max-width:1060px){.rise-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.rise-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}.rise-card h3{font-size:22px}.rise-card p:last-child{font-size:14px;line-height:1.5}.rise-card .label{font-size:9px;letter-spacing:.16em}}
+.rise-card{display:grid;gap:14px;text-decoration:none;align-content:start;min-width:0}
+.rise-card .ph{aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+.rise-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.rise-card:hover img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.rise-card img{transition:none}.rise-card:hover img{transform:none}}
+.rise-card .label{margin-top:6px}
+.rise-card h3 em{font-style:italic;color:var(--wine)}
+.rise-card p:last-child{color:var(--muted);font-size:16px}
+
+/* comments */
+.comments{background:var(--paper-2);overflow:hidden}
+.comments .head{margin-bottom:40px}
+.comments + .case{border-top:1px solid var(--line)}
+.cm-row{overflow:hidden;padding-block:8px}
+.cm-row + .cm-row{margin-top:10px}
+.cm-track{display:flex;width:max-content;animation:cmroll 95s linear infinite}
+.cm-row.r2 .cm-track{animation-direction:reverse;animation-duration:110s}
+.cm-row.r3 .cm-track{animation-duration:85s}
+.cm-row:hover .cm-track{animation-play-state:paused}
+.cm-set{display:flex;gap:14px;padding-right:14px}
+.cm{margin:0;width:clamp(250px,30vw,340px);flex:none;background:var(--paper);border:1px solid var(--line);padding:22px 22px 18px;display:grid;gap:16px;align-content:space-between}
+.cm blockquote{margin:0;font:400 clamp(21px,1.9vw,26px)/1.25 var(--serif);color:var(--ink)}
+.cm figcaption{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.cm .av{width:30px;height:30px;border-radius:50%;background:var(--wine);color:var(--on-wine);display:grid;place-items:center;font:500 13px/1 var(--sans);flex:none}
+.cm .h{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow-wrap:anywhere}
+.cm .pill{margin-left:auto;font:500 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--on-wine);background:var(--wine);padding:6px 8px;flex:none}
+.cm.brand{border-color:var(--wine)}
+.cm .tick{width:14px;height:14px;fill:#3897F0;flex:none}
+@keyframes cmroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.cm-track{animation:none}.cm-row{overflow-x:auto}.cm-set[aria-hidden]{display:none}}
+
+/* results */
+.results{background:var(--night);color:var(--on-night)}
+.results .label,.results .lede{color:var(--on-night-muted)}
+.tops{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+@media (max-width:1000px){.tops{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.tops{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}.top .num{font-size:44px}.top p{font-size:13px}.top .num small{font-size:9px}}
+.top{display:grid;gap:18px;text-decoration:none;align-content:start;min-width:0}
+.top .ph{aspect-ratio:4/5;overflow:hidden}
+.top img{width:100%;height:100%;object-fit:cover}
+.top .num{font:400 clamp(56px,6vw,84px)/.9 var(--serif);font-variant-numeric:tabular-nums}
+.top .num small{display:block;font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-night-muted);margin-top:12px}
+.top p{font-size:15px;color:var(--on-night-muted);border-top:1px solid color-mix(in srgb,var(--on-night) 18%,transparent);padding-top:14px}
+.top p b{color:var(--on-night);font-weight:500}
+.totals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:72px;padding-top:36px;border-top:1px solid color-mix(in srgb,var(--on-night) 18%,transparent)}
+@media (max-width:760px){.totals{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.totals b{display:block;font:400 clamp(40px,4vw,56px)/1 var(--serif);font-variant-numeric:tabular-nums}
+.totals span{font:500 11px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--on-night-muted)}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(36px,6vw,110px);align-items:start}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}}
+.why-grid .lede{margin-top:28px}
+.points{display:grid;border-top:1px solid var(--ink)}
+.point{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:30px 0;border-bottom:1px solid var(--line)}
+.point .k{font:italic 400 28px/1 var(--serif);color:var(--wine)}
+.point-ph{grid-template-columns:clamp(96px,11vw,140px) 1fr;gap:clamp(16px,2vw,28px);align-items:center}
+.point-ph .th{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+.point-ph .th img,.point-ph .th video{width:100%;height:100%;object-fit:cover;display:block}
+.point h3{margin-bottom:10px}
+.point p{color:var(--muted)}
+
+/* stays band */
+.band{position:relative;color:#fff;background:#1D1916;padding:0;overflow:hidden;isolation:isolate}
+.band video{transform:scale(1.01);transform-origin:50% 50%}
+.band img,.band video{display:block;width:100%;height:clamp(440px,52vw,720px);object-fit:cover;object-position:50% 50%}
+.band::after{content:"";position:absolute;inset:-2px;z-index:1;background:linear-gradient(90deg,rgba(18,14,12,.78) 0%,rgba(18,14,12,.35) 55%,rgba(18,14,12,.05) 100%)}
+.band .over{position:absolute;inset:0;z-index:2;display:flex;align-items:center}
+.band .over .wrap{width:100%}
+.band .label{color:rgba(255,255,255,.75)}
+.band h2{margin-top:18px;max-width:none;text-wrap:pretty;font-size:clamp(44px,7.4vw,112px)}
+.band .label{max-width:none!important;white-space:nowrap;font-size:clamp(9px,2.5vw,11px);letter-spacing:clamp(.12em,.6vw,.22em)}
+.band p{margin-top:22px;max-width:44ch;color:rgba(255,255,255,.86);font-size:clamp(17px,1.4vw,19px)}
+.band .btn{margin-top:30px}
+@media (max-width:700px){.band img,.band video{height:auto;aspect-ratio:3/4}.band::after{background:linear-gradient(to top,rgba(18,14,12,.88),rgba(18,14,12,.2) 75%)}.band .over{align-items:flex-end;padding-bottom:36px}}
+.stays-detail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+@media (max-width:900px){.stays-detail{grid-template-columns:1fr 1fr}.deliver-wrap{grid-column:1/-1}}
+.stays-detail figure{margin:0;display:grid;gap:12px;min-width:0}
+.stays-detail figure .ph{aspect-ratio:4/5;overflow:hidden}
+.stays-detail img{width:100%;height:100%;object-fit:cover}
+.stays-detail figcaption{font-size:14px;color:var(--muted)}
+.stays-detail figcaption b{font:400 21px/1.2 var(--serif);color:var(--ink);display:block}
+.deliver{display:grid;border-top:1px solid var(--ink);padding:0;margin:0}
+.deliver li{list-style:none;padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:28px 1fr;gap:8px}
+.deliver li::before{content:"\2665\FE0E";color:var(--wine);font-size:15px;line-height:1.9}
+.deliver-wrap .label{margin-bottom:16px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,100px);align-items:center}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+.portrait{position:relative;aspect-ratio:4/5;overflow:hidden;max-width:500px;width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.about h2{font-size:clamp(52px,6.4vw,96px)}
+.about .lede{margin-top:22px}
+.facts-list{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--ink)}
+@media (max-width:560px){.facts-list{grid-template-columns:1fr}}
+.facts-head{margin-top:40px;color:var(--accent-text)!important}
+.facts-head + .facts-list{margin-top:14px}
+.facts-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.socials{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:32px}
+
+/* packages */
+.pk-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:1060px){.pk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:580px){.pk-grid{grid-template-columns:1fr}}
+.pk{display:grid;grid-template-rows:auto auto 1fr auto;gap:14px;padding:26px 24px;min-width:0;border:1px solid var(--line);background:color-mix(in srgb,var(--on-night) 4%,transparent)}
+.pk.feature{grid-template-columns:none;gap:14px;margin:0;align-items:stretch;border-color:var(--wine)}
+.pk{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.pk:hover{transform:translateY(-6px);box-shadow:0 18px 40px -22px rgba(0,0,0,.55)}
+@media (prefers-reduced-motion:reduce){.pk{transition:none}.pk:hover{transform:none}}
+.pk .label em{font-style:normal;color:var(--wine)}
+.pk-top{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:10px;align-items:end}
+.pk-top > div{display:contents}
+.pk-top .label{grid-column:1/-1}
+.pk h3{font-size:clamp(26px,2.3vw,32px);line-height:1.05}
+.pk .price{font:400 clamp(30px,2.6vw,38px)/1 var(--serif);font-variant-numeric:tabular-nums;text-align:right;flex:none;white-space:nowrap}
+.pk .price small{display:block;font:400 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.pk .price small.per{display:inline;font:400 14px/1 var(--sans);letter-spacing:0;text-transform:none;margin:0 0 0 2px}
+.pk-sum{font-size:14px;color:var(--muted);margin-top:-6px!important}
+.pk ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:15px;line-height:1.45;align-content:start;padding-top:14px;border-top:1px solid var(--line)}
+.pk li{display:grid;grid-template-columns:16px 1fr;gap:6px}
+.pk li::before{content:"\2665\FE0E";color:var(--wine);font-size:12px;line-height:1.8}
+.pk .btn{padding-block:15px}
+.pk .btn:not(.pay){background:var(--wine);border-color:var(--wine);color:var(--on-wine)}
+.pk .btn:not(.pay):hover{background:color-mix(in srgb,var(--wine) 82%,#000);border-color:color-mix(in srgb,var(--wine) 82%,#000)}
+.pk .btn{width:100%}
+.addons{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px 0;align-items:baseline;justify-content:center;text-align:center}
+.addons .label{width:100%;margin-bottom:8px}
+.addons span{font-size:15px;padding-inline:18px;border-left:1px solid var(--line)}
+.addons span:nth-of-type(1){border-left:0}
+.addons b{font-weight:500;color:var(--wine)}
+.fine{margin-top:22px;font-size:14px;color:var(--muted);text-align:center}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media (max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:first-child{grid-column:1/-1}}
+.step{padding:clamp(18px,2vw,28px);border:1px solid var(--line);background:color-mix(in srgb,var(--on-night) 4%,transparent);display:grid;gap:8px;align-content:start;min-width:0}
+.step .n{font:italic 400 22px/1 var(--serif);color:var(--wine)}
+.step h3{font-size:clamp(22px,2vw,28px)}
+.step p{font-size:15px;line-height:1.5;color:var(--muted)}
+@media (max-width:560px){.step p{font-size:14px}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,100px)}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font:400 clamp(22px,2vw,27px)/1.25 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:22px;font:300 28px/1 var(--sans);color:var(--wine);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;color:var(--muted);max-width:62ch}
+
+/* book */
+.book{background:var(--night);color:var(--on-night)}
+.book .label{color:var(--on-night-muted)}
+.book h2{font-size:clamp(56px,8vw,124px);margin-top:18px}
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,96px);align-items:start}
+@media (max-width:920px){.book-grid{grid-template-columns:1fr}}
+.book .lede{color:var(--on-night-muted);margin-top:24px}
+.mail{margin-top:40px;display:grid;gap:10px}
+.mail .addr{font:400 clamp(28px,3vw,40px)/1.1 var(--serif);user-select:all;word-break:break-all}
+.mail-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.book .mail .btn{border-color:color-mix(in srgb,var(--on-night) 70%,transparent);color:var(--on-night)}
+.book .mail .btn:hover{background:var(--on-night);color:var(--night)}
+.book .mail .addr{color:var(--on-night);text-decoration:none;transition:color .2s}
+.book .mail .addr:hover,.book .mail .addr:focus-visible{color:#E59CA4}
+.book .mail .btn-wine{background:var(--wine);color:var(--on-wine)}
+.book .mail .btn-wine:hover{background:color-mix(in srgb,var(--wine) 82%,#000);color:var(--on-wine)}
+form{background:var(--form);color:var(--ink);border-top:4px solid var(--wine);box-shadow:0 30px 80px -30px rgba(0,0,0,.45);padding:clamp(24px,3.4vw,44px);display:grid;gap:20px;min-width:0}
+form h3{font-size:34px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:8px;font:500 10px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-text);min-width:0}
+input,select,textarea{font:300 17px/1.4 var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--form-line);border-radius:0;padding:10px 0;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 10px) 52%,calc(100% - 5px) 52%;background-size:5px 5px;background-repeat:no-repeat;padding-right:24px}
+select option{background:var(--form);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--wine)}
+textarea{min-height:90px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{font:500 10px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent-text);margin-bottom:12px;padding:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--form-line);background:var(--chip);transition:background-color .2s,color .2s,border-color .2s;cursor:pointer;font:400 14px/1 var(--sans);letter-spacing:0;text-transform:none;color:var(--ink)}
+.opts input{width:auto;margin:0;accent-color:var(--wine)}
+.opts label:has(input:checked){background:var(--wine);border-color:var(--wine);color:var(--on-wine)}
+.opts label:has(input:checked) input{accent-color:var(--on-wine)}
+form h3 em{font-style:italic;color:var(--accent-text)}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb,var(--on-night) 42%,transparent)}
+/* brief form matches the process and package boxes */
+.book form{background:color-mix(in srgb,var(--on-night) 4%,transparent);color:var(--on-night);border:1px solid color-mix(in srgb,var(--on-night) 16%,transparent);box-shadow:none}
+.book form h3 em{color:inherit}
+.book form label,.book form legend{color:var(--on-night-muted)}
+.book form input,.book form select,.book form textarea{color:var(--on-night);border-bottom-color:color-mix(in srgb,var(--on-night) 20%,transparent)}
+.book form select option{background:var(--night);color:var(--on-night)}
+.book form .opts label{color:var(--on-night);background:transparent;border-color:color-mix(in srgb,var(--on-night) 20%,transparent)}
+.book form .opts label:has(input:checked){background:var(--wine);border-color:var(--wine);color:var(--on-wine)}
+.book form .btn:not(.btn-wine){color:var(--on-night);border-color:color-mix(in srgb,var(--on-night) 70%,transparent)}
+.book form pre{color:var(--on-night);background:color-mix(in srgb,var(--on-night) 6%,transparent)}
+.book form .status{color:var(--on-night-muted)}
+.out{display:grid;gap:12px}
+.out pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 14px/1.6 var(--sans);background:var(--paper-2);padding:18px;max-height:280px;overflow:auto}
+.out .acts{display:flex;flex-wrap:wrap;gap:10px}
+.status{font-size:14px;color:var(--muted)}
+
+footer{padding-block:clamp(56px,8vw,96px) 32px;background:var(--night);color:var(--on-night-muted);border-top:1px solid color-mix(in srgb,var(--on-night) 14%,transparent);font-size:14px}
+footer a{color:var(--on-night);text-decoration:none;transition:color .2s,background-color .2s,border-color .2s}
+footer a:hover,footer a:focus-visible{color:#E59CA4}
+footer a:active{color:#F0B9BF}
+.ft-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
+.ft-logo{display:inline-block;font-size:clamp(44px,7vw,96px);color:var(--on-night)}
+.ft-logo em{font-style:italic}
+.ft-tag{margin-top:14px;font:400 clamp(18px,1.6vw,22px)/1.3 var(--serif);color:var(--on-night-muted)}
+.ft-tag em{font-style:italic;color:#A11B2B}
+.ft-social{display:flex;flex-wrap:wrap;gap:12px}
+.ft-ico{display:inline-flex;align-items:center;gap:12px;padding:10px 18px 10px 10px;border:1px solid color-mix(in srgb,var(--on-night) 22%,transparent)}
+.ft-ico svg{width:40px;height:40px;padding:9px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1.5px rgba(247,238,234,.8);fill:none;stroke:var(--on-wine);stroke-width:1.6;stroke-linejoin:round;flex:none;transition:transform .25s}
+.ft-ico span{display:grid;gap:3px;font-size:15px;line-height:1.1}
+.ft-ico small{font:500 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-night-muted)}
+.ft-ico:hover{border-color:#E59CA4}
+.ft-ico:hover svg{transform:scale(1.08)}
+.ft-nav{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:clamp(40px,5vw,64px);padding-block:22px;border-block:1px solid color-mix(in srgb,var(--on-night) 14%,transparent)}
+.ft-nav a{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+footer .ft-nav a:hover,footer .ft-nav a:focus-visible{color:#C02535}
+footer .ft-nav a:active{color:#8E1426}
+@media (max-width:560px){.ft-nav{flex-wrap:nowrap;justify-content:space-between;gap:0 8px}.ft-nav a{font-size:clamp(8px,2.45vw,11px);letter-spacing:.1em;white-space:nowrap}}
+.ft-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;margin-top:22px;font-size:13px}
+.ft-base .orn{color:var(--wine)}
+@media (max-width:560px){.ft-social{width:100%;display:grid;grid-template-columns:1fr}.ft-ico{width:100%}}
+
+/* text rhythm: one spacing system for every label, heading and lede */
+:root{--g-label:clamp(14px,1.3vw,20px);--g-lede:clamp(18px,1.8vw,26px)}
+.lede{line-height:1.6}
+.label:has(+ :is(h1,h2,h3)){margin-bottom:0!important}
+.label + :is(h1,h2,h3){margin-top:var(--g-label)!important}
+:is(h1,h2,h3) + :is(.lede,p.sub){margin-top:var(--g-lede)!important}
+.head{row-gap:var(--g-lede)}
+.head .label{margin-bottom:0}
+.chapter-head .num + div .label{margin-top:0}
+.rise-card .label + h3,.pk .label + h3{margin-top:0!important}
+.rise-card .label{margin-bottom:-6px}
+.pk .label{margin-bottom:0}
+.label em{display:inline-block;line-height:1;vertical-align:baseline}
+
+/* custom cursor: a real cursor image, so clicks land exactly under the dot */
+@media (hover:hover) and (pointer:fine){
+  html,body,*{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ccircle%20cx%3D%228.0%22%20cy%3D%228.0%22%20r%3D%226.5%22%20fill%3D%22%238E1426%22%20stroke%3D%22%23F7EEEA%22%20stroke-opacity%3D%22.8%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E") 8 8,auto}
+  a,button,summary,label,select,.card,[role=button],a *,button *,summary *,label *{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212.0%22%20cy%3D%2212.0%22%20r%3D%2210.5%22%20fill%3D%22%238E1426%22%20stroke%3D%22%23F7EEEA%22%20stroke-opacity%3D%22.8%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E") 12 12,pointer}
+  *:active,a:active *,button:active *{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Ccircle%20cx%3D%2215.0%22%20cy%3D%2215.0%22%20r%3D%2213.5%22%20fill%3D%22%238E1426%22%20stroke%3D%22%23F7EEEA%22%20stroke-opacity%3D%22.8%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E") 15 15,pointer}
+  input:not([type=checkbox]),textarea{cursor:text}
+}
+
+/* white ring, matching the cursor */
+.logo i{box-shadow:0 0 0 1.5px rgba(247,238,234,.8)}
+.btn-wine,.pk .btn:not(.pay){border:1.5px solid rgba(247,238,234,.8)!important}
+
+/* tiny "view post" tag on every linked example */
+.card .ph,.rise-card .ph,.top .ph,.feature .mosaic a,.case-media a{position:relative}
+.card .ph::after,.rise-card .ph::after,.top .ph::after,.feature .mosaic a::after,.case-media a::after{content:"View post \2197";position:absolute;top:8px;right:8px;z-index:2;font:500 9px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(18,14,12,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:6px 8px;pointer-events:none;transition:background-color .2s}
+.card:hover .ph::after,.rise-card:hover .ph::after,.top:hover .ph::after,.feature .mosaic a:hover::after,.case-media a:hover::after{background:var(--wine)}
+
+/* hero hearts */
+.hearts{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.band .hearts{z-index:2}
+.hearts .h{position:absolute;bottom:4%;opacity:0;animation:hrise var(--d) cubic-bezier(.25,.6,.35,1) forwards}
+.hearts .h svg{width:100%;height:100%;display:block;filter:drop-shadow(0 3px 8px rgba(0,0,0,.18));animation:hsway calc(var(--d)/2) ease-in-out infinite alternate}
+@keyframes hrise{0%{opacity:0;transform:translateY(0) scale(.3)}10%{opacity:1;transform:translateY(-10%) scale(1.15)}18%{transform:translateY(-30%) scale(1)}70%{opacity:1}100%{opacity:0;transform:translateY(-620%) scale(.9)}}
+@keyframes hsway{from{transform:translateX(calc(var(--w)*-1)) rotate(-8deg)}to{transform:translateX(var(--w)) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.hearts{display:none}}
+
+/* how content goes live */
+.golive{margin-top:clamp(40px,5vw,64px)}
+.golive-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 32px;margin-bottom:18px}
+.golive-sub{color:var(--muted);max-width:56ch}
+.golive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.golive-grid{grid-template-columns:1fr}}
+.gl{position:relative;border:1px solid var(--line);background:color-mix(in srgb,var(--on-night) 4%,transparent);padding:clamp(18px,2vw,26px);display:grid;gap:8px;align-content:start}
+.gl h3{font-size:clamp(22px,2vw,28px);padding-right:84px}
+.gl p{color:var(--muted);font-size:15px;line-height:1.5}
+.gl-p{position:absolute;top:clamp(18px,2vw,26px);right:clamp(18px,2vw,26px);font:400 clamp(22px,2vw,28px)/1 var(--serif);color:var(--ink)}
+.gl:first-child .gl-p{font:500 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);top:clamp(24px,2.4vw,32px)}
+.gl-star{border-color:var(--wine)}
+.gl-list{list-style:none;padding:12px 0 0;margin:4px 0 0;border-top:1px solid var(--line);display:grid;gap:6px;font-size:14px;color:var(--ink)}
+.gl-list li{display:grid;grid-template-columns:16px 1fr;gap:6px}
+.gl-list li::before{content:"\2665\FE0E";color:var(--wine);font-size:12px;line-height:1.7}
+
+/* Hospitality chapter on dark */
+#hospitality{--paper:#1A1614;--paper-2:#1A1614;--ink:#EDE6DF;--muted:#A79C93;--line:#3A322D;--accent-text:#E59CA4;--wine:#A11B2B;background:#1A1614;color:var(--ink)}
+#hospitality .card .ph,#hospitality .rise-card .ph{background:#2A2421}
+.comments + #hospitality{border-top:0}
+
+/* Packages on dark */
+#packages{--paper:#1A1614;--paper-2:#221C19;--ink:#EDE6DF;--muted:#A79C93;--line:#3A322D;--accent-text:#E59CA4;--wine:#A11B2B;background:#1A1614;color:var(--ink);padding-top:clamp(60px,10vw,140px)!important}
+#process{padding-top:clamp(60px,10vw,140px)!important}
+
+[id]{scroll-margin-top:68px}
+/* inline booking prompts */
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;margin-top:clamp(44px,6vw,80px);padding-top:clamp(24px,3vw,36px);border-top:1px solid var(--line)}
+.cta-row p{font:400 clamp(24px,2.4vw,34px)/1.2 var(--serif);max-width:30ch;text-wrap:balance}
+.cta-row p em{font-style:italic;color:var(--accent-text)}
+.results .cta-row{border-top-color:color-mix(in srgb,var(--on-night) 16%,transparent)}
+.results .cta-row p{color:var(--on-night)}
+.why-grid .cta-row{grid-column:1/-1;margin-top:calc(clamp(40px,4vw,56px) - clamp(36px,6vw,110px))}
+#why{padding-bottom:clamp(56px,6vw,88px)}
+@media (max-width:560px){.cta-row .btn{width:100%}.cta-row p{max-width:none;text-wrap:pretty}}
+
+/* light grey boxes for process steps and FAQs */
+#process .step{background:#E6E1DC;border-color:#DAD3CC}
+#faq details{background:#E6E1DC;border:1px solid #DAD3CC;padding:0 clamp(18px,2vw,26px);margin-bottom:10px}
+#faq details:first-child{border-top:1px solid #DAD3CC}
+#faq summary::after{right:0}
+#faq details p{padding-bottom:22px}
+
+/* tap to play fallback, only shown if a browser blocks autoplay */
+.vplay{display:none;position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;border:1.5px solid rgba(247,238,234,.85);background:rgba(101,13,27,.82);cursor:pointer;z-index:3;padding:0}
+.vplay svg{width:20px;height:20px;fill:#F7EEEA;margin-left:3px}
+video.blocked + .vplay{display:block}
+
+@media (min-width:1101px){.grid-5{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.card video,.rise-card video,.trip video{width:100%;height:100%;object-fit:cover;display:block}
+.card:hover video{transform:scale(1.035)}
+.card video{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){.card video{transition:none}.card:hover video{transform:none}}
+
+/* chapters */
+.chapter-head{display:grid;grid-template-columns:1fr;gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:48px;border-bottom:1px solid var(--line);padding-bottom:32px}
+@media (max-width:760px){.chapter-head{grid-template-columns:1fr}}
+.chapter-head .num{font:italic 400 clamp(64px,9vw,140px)/.8 var(--serif);color:var(--wine)}
+.chapter-head .lede{margin-top:16px}
+.feature{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,80px);align-items:center;margin-bottom:clamp(56px,7vw,96px)}
+@media (max-width:900px){.feature{grid-template-columns:1fr}}
+.feature .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+.feature .mosaic .col{display:grid;gap:12px;align-content:start;min-width:0}
+.feature .mosaic a{display:block;overflow:hidden}
+.feature .mosaic img{width:100%;height:100%;object-fit:cover}
+.feature .mosaic .tall{aspect-ratio:2/3}
+.feature .mosaic .sq{aspect-ratio:4/5}
+.feature .lede{margin-top:22px}
+.feature .deliver{margin-top:28px}
+.feature .link{display:inline-block;margin-top:28px}
+.sub-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin:clamp(56px,7vw,88px) 0 28px}
+.sub-head h3{font-size:clamp(30px,3vw,44px)}
+.pk .pay{margin-top:-8px}
+.paynote{margin-top:10px;font-size:13px;color:var(--muted);text-align:center}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <ul>
+      <li><a href="#stays">Stays</a></li>
+      <li><a href="#hospitality">Hospitality</a></li>
+      <li><a href="#style">Style</a></li>
+      <li><a href="#packages">Packages</a></li>
+    </ul>
+    <a class="logo" href="#top">Inge <em>Loock</em><i aria-hidden="true"></i></a>
+    <div class="nav-r">
+      <a class="btn btn-wine" href="#book">Book a shoot</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mmenu" id="mmenu" hidden>
+    <p class="label">Jump to</p>
+    <a href="#stays"><span>Resorts &amp; stays</span><small>Villas, charters, Airbnbs</small></a>
+    <a href="#hospitality"><span>Hospitality</span><small>Restaurants, bars, events, drinks</small></a>
+    <a href="#style"><span>Fashion &amp; beauty</span><small>Swim, activewear, wellness</small></a>
+    <a href="#comments"><span>What people say</span><small>Comments from my posts</small></a>
+    <a href="#results"><span>Results</span><small>Top performing posts</small></a>
+    <a href="#about"><span>About me</span><small>Hello, I'm Inge</small></a>
+    <a href="#packages"><span>Packages</span><small>Pricing and add ons</small></a>
+    <a href="#faq"><span>FAQ</span><small>Good to know</small></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="trip">
+    <figure><img src="img/nz_tub.jpg" alt="Inge in a clifftop hot tub at sunset with a glass of champagne"></figure>
+    <figure><video class="pv" data-src="vid/vid_reel.mp4?v=14" poster="img/reel_poster.jpg" muted loop playsinline autoplay preload="auto" aria-label="A fast montage of Inge's brand content: resorts, beach clubs, fashion, wine, beauty and travel"></video><div class="hearts" aria-hidden="true"></div></figure>
+    <figure><img src="img/villa_pool.jpg" alt="Friends in the courtyard plunge pool at a boutique villa resort"></figure>
+  </div>
+  <div class="hero-copy">
+    <div class="wrap">
+      <p class="label">UGC creator <span class="orn">♥︎</span> <span class="hide-sm">Brand strategist <span class="orn">♥︎</span> </span>Based on the Gold Coast</p>
+      <h1>Content for places people <em>long</em> to be.</h1>
+      <p class="sub">Lifestyle video and photography for resorts, stays, hospitality, fashion and beauty brands. Planned like a campaign, shot like a memory, made to convert.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wine" href="#book">Book a shoot</a>
+        <a class="btn btn-light" href="#stays">View the work</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap">
+    <div><b class="count" data-to="20.3" data-dec="1" data-suf="K">20.3K</b><span>organic views on one reel</span></div>
+    <div><b class="count" data-to="15" data-suf="+">15+</b><span>brands &amp; venues</span></div>
+    <div><b class="count" data-to="5">5</b><span>countries filmed</span></div>
+    <div><b class="count" data-to="5" data-suf="+">5+</b><span>years as a content creator</span></div>
+  </div>
+</div>
+
+<div class="brands">
+  <div class="wrap">
+    <p class="label">Selected collaborations</p>
+    <div class="brand-track"><div class="brand-set"><span class="b">Lorna Jane</span><span class="b">Ringers Western</span><span class="b">Finns Beach Club</span><span class="b">Maman Bar &amp; Kitchen</span><span class="b">Bote Charters</span><span class="b">Tommy's Currumbin</span><span class="b">Komune Resort</span><span class="b">Pepperjack</span><span class="b">Sunny Days Vodka</span><span class="b">LVR Bridal</span><span class="b">Beudi Agave</span><span class="b">Eyekonik</span><span class="b">Sway Cosmetic Studio</span></div><div class="brand-set dup" aria-hidden="true"><span class="b">Lorna Jane</span><span class="b">Ringers Western</span><span class="b">Finns Beach Club</span><span class="b">Maman Bar &amp; Kitchen</span><span class="b">Bote Charters</span><span class="b">Tommy's Currumbin</span><span class="b">Komune Resort</span><span class="b">Pepperjack</span><span class="b">Sunny Days Vodka</span><span class="b">LVR Bridal</span><span class="b">Beudi Agave</span><span class="b">Eyekonik</span><span class="b">Sway Cosmetic Studio</span></div></div>
+  </div>
+</div>
+
+<main>
+<section class="intro">
+  <div class="wrap">
+    <p class="label">The approach</p>
+    <p class="big">I plan every shoot around your brand, your feed and the guest you <em>dream</em> of attracting. Then I bring the energy that makes them want to be there.</p>
+    <p class="sig">Inge Loock, founder &amp; UGC content creator</p>
+  </div>
+</section>
+
+<!-- Chapter I: stays -->
+<section class="band" id="stays" aria-label="Resorts, stays and travel">
+  <video class="pv" data-src="vid/vid_bali_band.mp4" poster="img/bali_band.jpg" muted loop playsinline autoplay preload="metadata" aria-label="A girls trip at a Bali villa: the front door, the pool, sunset drinks by the ocean"></video>
+  <div class="hearts right" aria-hidden="true"></div>
+  <div class="over">
+    <div class="wrap">
+      <p class="label">For resorts, villas, charters &amp; Airbnb hosts</p>
+      <h2>Guests book on a feeling. I film <em>the feeling</em>.</h2>
+      <p>First light through the window. The walk to the pool. The dinner worth the drive. Your property, the way a guest remembers it.</p>
+      <a class="btn btn-light" href="#book" data-pk="Stay &amp; Create">Invite me to stay</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:clamp(64px,8vw,110px)">
+  <div class="wrap">
+    <div class="feature">
+      <div class="mosaic">
+        <div class="col">
+          <a class="tall" href="https://www.instagram.com/ingeloock/p/C5KeZjNhf18/" target="_blank" rel="noopener"><img src="img/villa_pool.jpg" alt="Friends in the courtyard plunge pool at a boutique villa resort" loading="lazy"></a>
+          <a class="sq" href="https://www.instagram.com/ingeloock/p/C5KeZjNhf18/" target="_blank" rel="noopener"><img src="img/villa_polaroids.jpg" alt="Polaroids from the resort stay scattered on stone" loading="lazy"></a>
+        </div>
+        <div class="col">
+          <a class="sq" href="https://www.instagram.com/ingeloock/p/C5KeZjNhf18/" target="_blank" rel="noopener"><img src="img/villa_toast.jpg" alt="Two friends toasting with wine in the resort pool" loading="lazy"></a>
+          <a class="tall" href="https://www.instagram.com/ingeloock/p/C5KeZjNhf18/" target="_blank" rel="noopener"><img src="img/villa_green.jpg" alt="Inge in a green bikini stepping into the courtyard pool" loading="lazy"></a>
+        </div>
+      </div>
+      <div>
+        <p class="label">Featured <span class="orn">♥︎</span> Resort content day</p>
+        <h2>Made for their website <em>and</em> their socials.</h2>
+        <p class="lede">A boutique villa resort wanted content that sold the experience of arriving with your favourite people. I planned the day around their courtyards, pools and golden hour, then delivered a library of images and reels they now use across their website and Instagram.</p>
+        <ul class="deliver">
+          <li>A face to face or FaceTime meeting with your team to get to know you and your business</li>
+          <li>Hero reel and short cutdowns for Reels, TikTok and Stories</li>
+          <li>Room, amenity, food and experience photography</li>
+          <li>A shot list built around your best selling rooms and packages</li>
+        </ul>
+        <a class="link" href="https://www.instagram.com/ingeloock/p/C5KeZjNhf18/" target="_blank" rel="noopener">View the resort post</a>
+      </div>
+    </div>
+    <div class="sub-head"><h3>More <em>stays</em></h3><p class="label">Resorts, villas, Airbnbs, lodges</p></div>
+    <div class="grid grid-5">
+      <a class="card" href="https://www.instagram.com/ingeloock/p/C5h_ut4rVHG/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_komune.mp4" poster="img/komune_pool.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Inge in the resort pool among palms"></video></div>
+        <div class="cap"><div class="row"><b>Komune Resort</b><span class="n">Bali</span></div><small>Poolside, slow and still</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/C5DWgjILGK7/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/bali_airbnb.jpg" alt="Inge in a shell hat inside a white Bali villa" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Bali Airbnb</b><span class="n">168 likes</span></div><small>Don't wake me, I'm not dreaming</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DOp4WIxgaJE/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_breezy.mp4" poster="img/breezy.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Inge in a green bikini and cowboy hat on a beach towel by the water"></video></div>
+        <div class="cap"><div class="row"><b>Breezy Club &amp; Ringers Western Shoot</b><span class="n">Gold Coast</span></div><small>Beach day in the hat and a green bikini</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DNKGRfJh-nE/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/qt_lounge.jpg" alt="Lodge lounge with lake views and balloons" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Lake view lodge</b><span class="n">Airbnb</span></div><small>Postcard perfect Queenstown</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/Cuy8zqMAxnK/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_euboat.mp4" poster="img/euboat.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Friends in sun hats on a boat at sunset"></video></div>
+        <div class="cap"><div class="row"><b>Sunset boat day</b><span class="n">Europe</span></div><small>European summer, cup overflowing</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DVWsq8Ck4K3/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/norway_spa.jpg" alt="Two friends in a steaming hot tub surrounded by snow" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Spa resort</b><span class="n">Norway</span></div><small>Hot tubs in the snow, for their socials</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DVr7w3Agbas/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/jungle_resort.jpg" alt="Inge on the edge of an infinity pool above the Bali jungle" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Jungle resort</b><span class="n">Bali</span></div><small>Infinity pool in the jungle, no reception</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/Cufcg3AsrMH/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/atv.jpg" alt="Inge standing on a blue quad bike above the Aegean" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Island adventure</b><span class="n">Greece</span></div><small>Quad bike island life</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DT1QnI2E52D/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DT1QnI2E52D.jpg" alt="Infinity pool at a safari lodge" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Safari lodge</b><span class="n">South Africa</span></div><small>Infinity pool over the bushveld</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DTJI4KAjAAr/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DTJI4KAjAAr.jpg" alt="Lodge deck overlooking the bush at sunset" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Bush lodge</b><span class="n">South Africa</span></div><small>Golden hour from the deck</small></div>
+      </a>
+    </div>
+    <div class="cta-row"><p>Own a resort, villa, charter or Airbnb? Let's make guests <em>long</em> to stay.</p><a class="btn btn-wine" href="#book" data-pk="Stay &amp; Create">Book a stay shoot</a></div>
+  </div>
+</section>
+
+<section class="comments" id="comments" aria-label="Comments from Instagram">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="label">Straight from the comments</p><h2>They want to be <em>there</em>.</h2></div>
+      <p class="lede" style="max-width:44ch">Real comments from my posts. People asking where it is, what brand it is and how to come next time. And the brands themselves, back in the comments.</p>
+    </div>
+  </div>
+<div class="cm-row r1"><div class="cm-track"><div class="cm-set"><figure class="cm"><blockquote>Where is this?</blockquote><figcaption><span class="av" aria-hidden="true">V</span><span class="h">@vernparkes<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm"><blockquote>Oh wow take me here please 😍😍😍</blockquote><figcaption><span class="av" aria-hidden="true">E</span><span class="h">@ellarae_turner</span></figcaption></figure><figure class="cm"><blockquote>So gorgeous 😍 I need these flared leggings! 🔥</blockquote><figcaption><span class="av" aria-hidden="true">K</span><span class="h">@kirjaparcell</span></figcaption></figure><figure class="cm"><blockquote>Love this bikini, what brand?🔥</blockquote><figcaption><span class="av" aria-hidden="true">B</span><span class="h">@balibabe.salons</span></figcaption></figure><figure class="cm"><blockquote>Sign me up 🔥</blockquote><figcaption><span class="av" aria-hidden="true">P</span><span class="h">@paigetilby_</span></figcaption></figure><figure class="cm"><blockquote>Get me in there! 😍</blockquote><figcaption><span class="av" aria-hidden="true">B</span><span class="h">@brookelindemann__</span></figcaption></figure><figure class="cm"><blockquote>I’m coming to the next trip 😍</blockquote><figcaption><span class="av" aria-hidden="true">C</span><span class="h">@cherubh</span></figcaption></figure><figure class="cm"><blockquote>Looks so so incredible. Can’t wait to come with you one visit 😍😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@alexandracuthill</span></figcaption></figure><figure class="cm"><blockquote>Yum!!! Looks so good and the food hehe</blockquote><figcaption><span class="av" aria-hidden="true">R</span><span class="h">@reneekirkup</span></figcaption></figure><figure class="cm"><blockquote>The perfect girls night 😍</blockquote><figcaption><span class="av" aria-hidden="true">K</span><span class="h">@kirjaparcell</span></figcaption></figure><figure class="cm"><blockquote>This looks like such a fabolous time 🛥️😍</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lara_felicitas</span></figcaption></figure><figure class="cm"><blockquote>Love this ❤️❤️❤️ Travel inspiration at its finest 😍</blockquote><figcaption><span class="av" aria-hidden="true">G</span><span class="h">@greergardiner</span></figcaption></figure></div><div class="cm-set" aria-hidden="true"><figure class="cm"><blockquote>Where is this?</blockquote><figcaption><span class="av" aria-hidden="true">V</span><span class="h">@vernparkes<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm"><blockquote>Oh wow take me here please 😍😍😍</blockquote><figcaption><span class="av" aria-hidden="true">E</span><span class="h">@ellarae_turner</span></figcaption></figure><figure class="cm"><blockquote>So gorgeous 😍 I need these flared leggings! 🔥</blockquote><figcaption><span class="av" aria-hidden="true">K</span><span class="h">@kirjaparcell</span></figcaption></figure><figure class="cm"><blockquote>Love this bikini, what brand?🔥</blockquote><figcaption><span class="av" aria-hidden="true">B</span><span class="h">@balibabe.salons</span></figcaption></figure><figure class="cm"><blockquote>Sign me up 🔥</blockquote><figcaption><span class="av" aria-hidden="true">P</span><span class="h">@paigetilby_</span></figcaption></figure><figure class="cm"><blockquote>Get me in there! 😍</blockquote><figcaption><span class="av" aria-hidden="true">B</span><span class="h">@brookelindemann__</span></figcaption></figure><figure class="cm"><blockquote>I’m coming to the next trip 😍</blockquote><figcaption><span class="av" aria-hidden="true">C</span><span class="h">@cherubh</span></figcaption></figure><figure class="cm"><blockquote>Looks so so incredible. Can’t wait to come with you one visit 😍😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@alexandracuthill</span></figcaption></figure><figure class="cm"><blockquote>Yum!!! Looks so good and the food hehe</blockquote><figcaption><span class="av" aria-hidden="true">R</span><span class="h">@reneekirkup</span></figcaption></figure><figure class="cm"><blockquote>The perfect girls night 😍</blockquote><figcaption><span class="av" aria-hidden="true">K</span><span class="h">@kirjaparcell</span></figcaption></figure><figure class="cm"><blockquote>This looks like such a fabolous time 🛥️😍</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lara_felicitas</span></figcaption></figure><figure class="cm"><blockquote>Love this ❤️❤️❤️ Travel inspiration at its finest 😍</blockquote><figcaption><span class="av" aria-hidden="true">G</span><span class="h">@greergardiner</span></figcaption></figure></div></div></div>
+  <div class="cm-row r2"><div class="cm-track"><div class="cm-set"><figure class="cm brand"><blockquote>Obsessed✨🥂💛</blockquote><figcaption><span class="av" aria-hidden="true">M</span><span class="h">@maman_barkitchen<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Epic shots</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nicka35<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm brand"><blockquote>Supportive queen while staying NOURISHED from the inside out 😍❤️</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lornajaneactive<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Wow this so so beautiful, amazing shot!</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@luxecolls</span></figcaption></figure><figure class="cm brand"><blockquote>The perfect night in 🍷</blockquote><figcaption><span class="av" aria-hidden="true">P</span><span class="h">@pepperjackwine</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>What dreams are made of!</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@shandellove<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm brand"><blockquote>Always fit check-worthy with LJ 😍❤️</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lornajaneactive<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm brand"><blockquote>Love love love</blockquote><figcaption><span class="av" aria-hidden="true">R</span><span class="h">@ringerswestern</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Oh the vibe is so so right 🔥🔥🔥</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sharimayhade</span></figcaption></figure><figure class="cm brand"><blockquote>We LOVE when you visit! 🤎</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sway_cosmetictattoo</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>So much spice in one post 🌶️</blockquote><figcaption><span class="av" aria-hidden="true">C</span><span class="h">@chloeaddis__</span></figcaption></figure><figure class="cm"><blockquote>You are something else. Stunning 🌹</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nikkiijoness</span></figcaption></figure><figure class="cm"><blockquote>So obsessed with this 🔥🔥🔥</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nikitrott</span></figcaption></figure></div><div class="cm-set" aria-hidden="true"><figure class="cm brand"><blockquote>Obsessed✨🥂💛</blockquote><figcaption><span class="av" aria-hidden="true">M</span><span class="h">@maman_barkitchen<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Epic shots</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nicka35<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm brand"><blockquote>Supportive queen while staying NOURISHED from the inside out 😍❤️</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lornajaneactive<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Wow this so so beautiful, amazing shot!</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@luxecolls</span></figcaption></figure><figure class="cm brand"><blockquote>The perfect night in 🍷</blockquote><figcaption><span class="av" aria-hidden="true">P</span><span class="h">@pepperjackwine</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>What dreams are made of!</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@shandellove<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span></figcaption></figure><figure class="cm brand"><blockquote>Always fit check-worthy with LJ 😍❤️</blockquote><figcaption><span class="av" aria-hidden="true">L</span><span class="h">@lornajaneactive<svg class="tick" viewBox="0 0 24 24" aria-label="Verified"><path d="M12 1.5l2.6 2 3.2-.4 1.2 3 3 1.2-.4 3.2 2 2.6-2 2.6.4 3.2-3 1.2-1.2 3-3.2-.4-2.6 2-2.6-2-3.2.4-1.2-3-3-1.2.4-3.2-2-2.6 2-2.6-.4-3.2 3-1.2 1.2-3 3.2.4z"/><path d="M8 12.2l2.6 2.6L16.4 9" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class=pill>Brand</span></figcaption></figure><figure class="cm brand"><blockquote>Love love love</blockquote><figcaption><span class="av" aria-hidden="true">R</span><span class="h">@ringerswestern</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>Oh the vibe is so so right 🔥🔥🔥</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sharimayhade</span></figcaption></figure><figure class="cm brand"><blockquote>We LOVE when you visit! 🤎</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sway_cosmetictattoo</span><span class=pill>Brand</span></figcaption></figure><figure class="cm"><blockquote>So much spice in one post 🌶️</blockquote><figcaption><span class="av" aria-hidden="true">C</span><span class="h">@chloeaddis__</span></figcaption></figure><figure class="cm"><blockquote>You are something else. Stunning 🌹</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nikkiijoness</span></figcaption></figure><figure class="cm"><blockquote>So obsessed with this 🔥🔥🔥</blockquote><figcaption><span class="av" aria-hidden="true">N</span><span class="h">@nikitrott</span></figcaption></figure></div></div></div>
+  <div class="cm-row r3"><div class="cm-track"><div class="cm-set"><figure class="cm"><blockquote>the aesthetic is everything</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@shortiemess</span></figcaption></figure><figure class="cm"><blockquote>A dream ☁️🤍🌟</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@alexandracuthill</span></figcaption></figure><figure class="cm"><blockquote>Living the dream❤️</blockquote><figcaption><span class="av" aria-hidden="true">D</span><span class="h">@davila.jewels</span></figcaption></figure><figure class="cm"><blockquote>Heaveennnnnnnn</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@jacque_shaw</span></figcaption></figure><figure class="cm"><blockquote>Hot, aesthetic, pretty, marvellous</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@_jasmineday</span></figcaption></figure><figure class="cm"><blockquote>Been obsessed with this trip</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sharimayhade</span></figcaption></figure><figure class="cm"><blockquote>Magical! Stop it, photo 2 🤭🤍🐰</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@jacque_shaw</span></figcaption></figure><figure class="cm"><blockquote>OBSESSED 😍😍</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sthe.porto</span></figcaption></figure><figure class="cm"><blockquote>Looks amazing 😍😍😍😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@amyquattromanii</span></figcaption></figure><figure class="cm"><blockquote>Love your life gal 😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@abigaillouise___</span></figcaption></figure></div><div class="cm-set" aria-hidden="true"><figure class="cm"><blockquote>the aesthetic is everything</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@shortiemess</span></figcaption></figure><figure class="cm"><blockquote>A dream ☁️🤍🌟</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@alexandracuthill</span></figcaption></figure><figure class="cm"><blockquote>Living the dream❤️</blockquote><figcaption><span class="av" aria-hidden="true">D</span><span class="h">@davila.jewels</span></figcaption></figure><figure class="cm"><blockquote>Heaveennnnnnnn</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@jacque_shaw</span></figcaption></figure><figure class="cm"><blockquote>Hot, aesthetic, pretty, marvellous</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@_jasmineday</span></figcaption></figure><figure class="cm"><blockquote>Been obsessed with this trip</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sharimayhade</span></figcaption></figure><figure class="cm"><blockquote>Magical! Stop it, photo 2 🤭🤍🐰</blockquote><figcaption><span class="av" aria-hidden="true">J</span><span class="h">@jacque_shaw</span></figcaption></figure><figure class="cm"><blockquote>OBSESSED 😍😍</blockquote><figcaption><span class="av" aria-hidden="true">S</span><span class="h">@sthe.porto</span></figcaption></figure><figure class="cm"><blockquote>Looks amazing 😍😍😍😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@amyquattromanii</span></figcaption></figure><figure class="cm"><blockquote>Love your life gal 😍</blockquote><figcaption><span class="av" aria-hidden="true">A</span><span class="h">@abigaillouise___</span></figcaption></figure></div></div></div>
+</section>
+
+<!-- Chapter II: hospitality -->
+<section class="case" id="hospitality">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><p class="label">For restaurants, bars, events &amp; drink brands</p><h2>Brands on the <em>rise</em>.</h2><p class="lede">The founders I create for are building something. I make their content look like the brand they're becoming.</p></div>
+    </div>
+    <div class="case-grid">
+      <div class="case-media mosaic2">
+        <div class="col">
+          <a class="tall" href="https://www.instagram.com/ingeloock/p/DNPu330hnJK/" target="_blank" rel="noopener"><img src="img/maman_pour.jpg" alt="Friends pouring wine over a Mediterranean spread at Maman" loading="lazy"></a>
+          <a class="sq" href="https://www.instagram.com/ingeloock/p/DNPu330hnJK/" target="_blank" rel="noopener"><img src="img/maman_cocktails.jpg" alt="Two cocktails raised in front of the gold Maman script on the wall" loading="lazy"></a>
+        </div>
+        <div class="col">
+          <a class="sq" href="https://www.instagram.com/ingeloock/p/DNPu330hnJK/" target="_blank" rel="noopener"><img src="img/maman_floss.jpg" alt="Two friends feeding each other fairy floss under Maman's scalloped arch" loading="lazy"></a>
+          <a class="tall" href="https://www.instagram.com/ingeloock/p/DNPu330hnJK/" target="_blank" rel="noopener"><img src="img/maman_oysters.jpg" alt="Oysters being dressed with lemon at Maman" loading="lazy"></a>
+        </div>
+      </div>
+      <div>
+        <p class="label">Case study <span class="orn">♥︎</span> Maman Bar &amp; Kitchen, Burleigh Heads</p>
+        <h2>Dinner with <em>friends</em>, styled for their feed.</h2>
+        <p class="lede">I planned Maman's content day around the guests they wanted more of: friends sharing plates, glasses raised, the room glowing gold. The images now run across Maman's social channels and their website, because they were made to sit naturally inside the brand.</p>
+        <div class="case-facts">
+          <div><span>Brief</span><b>Show the experience, not the menu</b></div>
+          <div><span>Made</span><b>A full content day</b></div>
+          <div><span>Now used on</span><b>Socials and website</b></div>
+        </div>
+        <p class="quote">"I plan every shoot to suit the business, the brand and the feed, so it reaches their dream guest."</p>
+        <a class="link" href="https://www.instagram.com/ingeloock/p/DNPu330hnJK/" target="_blank" rel="noopener">View the Maman post</a>
+      </div>
+    </div>
+
+    <div class="rise-grid" style="margin-top:clamp(64px,8vw,110px)">
+      <a class="rise-card" href="https://www.instagram.com/ingeloock/p/DVvFFgcgZlT/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/bote_deck.jpg" alt="Friends on the deck of a Bote Charters yacht" loading="lazy"></div>
+        <p class="label">Charter <span class="orn">♥︎</span> Gold Coast</p>
+        <h3>Bote Charters <em>&amp;</em> Tommy's</h3>
+        <p>A full day on the water: DJ on deck, wood fired pizza from Tommy's Currumbin, and a thirteen frame carousel that sells the whole experience.</p>
+      </a>
+      <a class="rise-card" href="https://www.instagram.com/p/DY35kXWRRSW/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_tommys.mp4" poster="img/tommys_picnic.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Friends sharing pizza on the beach at sunset"></video></div>
+        <p class="label">Hospitality <span class="orn">♥︎</span> Currumbin</p>
+        <h3>Tommy's Italian</h3>
+        <p>"Maybe the perfect date night is just pizza with the girls." A sunset picnic reel Tommy's posted on their own feed to drive online orders.</p>
+      </a>
+      <a class="rise-card" href="https://www.instagram.com/ingeloock/p/DSUenjkATs9/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/sunny_beach.jpg" alt="Two women with Sunny Days vodka on a beach picnic" loading="lazy"></div>
+        <p class="label">Spirits <span class="orn">♥︎</span> Ad campaign</p>
+        <h3>Sunny Days Vodka</h3>
+        <p>A beach picnic ad set: the bottle, the cans and the pour, styled so every frame could run as a paid ad or a product image.</p>
+      </a>
+      <a class="rise-card" href="https://www.instagram.com/ingeloock/p/DSQrYpnkzHB/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/beudi_beachy.jpg" alt="Inge holding a can of Beudi under striped beach club umbrellas" loading="lazy"></div>
+        <p class="label">Drinks <span class="orn">♥︎</span> Events</p>
+        <h3>Beudi Agave</h3>
+        <p>Two Beudi events and counting: Beudi x Beachy under the striped umbrellas, and a long afternoon at La Part. Product placed in the day its drinkers want to be having.</p>
+      </a>
+    </div>
+    <div class="sub-head"><h3>More <em>hospitality</em></h3><p class="label">Beach clubs, bars, events &amp; wine</p></div>
+    <div class="grid">
+      <a class="card" href="https://www.instagram.com/ingeloock/p/Dc5BHEtAZIl/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_finns.mp4" poster="img/finns_daybed.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Inge on a yellow striped daybed at Finns Beach Club"></video></div>
+        <div class="cap"><div class="row"><b>Finns Beach Club</b><span class="n">VIP, Bali</span></div><small>A birthday on the yellow daybeds</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DVyA4IHAcTx/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/gin_group.jpg" alt="Three friends dancing in a moody red gin bar" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Burly Gin</b><span class="n">Socials</span></div><small>More martinis, keep them coming</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/reel/DaR-NW1h0y_/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_pepperjack.mp4" poster="img/DaR-NW1h0y_.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Pepperjack wine on a candlelit table"></video></div>
+        <div class="cap"><div class="row"><b>Pepperjack</b><span class="n">2,330 views</span></div><small>Girls' night in, by candlelight</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DA0ZDlDyT0z/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/lvr_event.jpg" alt="Inge eating a cherry at a candlelit red and black event" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>LVR Bridal &amp; Elenti</b><span class="n">203 likes</span></div><small>Event content: the most romantic night</small></div>
+      </a>
+    </div>
+    <div class="cta-row"><p>Opening a venue, launching a menu or pouring something new? Let's fill the tables.</p><a class="btn btn-wine" href="#book">Book a shoot</a></div>
+  </div>
+</section>
+
+<!-- Chapter III: style -->
+<section id="style">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div><p class="label">For fashion, swim, beauty &amp; wellness brands</p><h2>Worn, styled and <em>loved</em>.</h2><p class="lede">Activewear I actually train in, swim shot in real water, beauty and wellness filmed the way it feels.</p></div>
+    </div>
+    <div class="grid grid-5">
+      <a class="card" href="https://www.instagram.com/ingeloock/reel/DP0qNLcAW0N/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_ringers.mp4" poster="img/DP0qNLcAW0N.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Festival outfit in Ringers Western"></video></div>
+        <div class="cap"><div class="row"><b>Ringers Western</b><span class="n">20.3K views</span></div><small>Festival fit check</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DV5cX71gdOl/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/beach_walk.jpg" alt="Inge walking out of the ocean in a black bikini" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Swimwear</b><span class="n">Beach shoot</span></div><small>Heaven on earth, straight from the water</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/reel/DE4RU0nSCrJ/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_lj.mp4" poster="img/DE4RU0nSCrJ.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Two friends in matching Lorna Jane sets"></video></div>
+        <div class="cap"><div class="row"><b>Lorna Jane</b><span class="n">6,640 views</span></div><small>Matching sets, morning walk</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/C2wplGIrSDt/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/dress_side.jpg" alt="Inge in a backless silk dress overlooking the hinterland" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Dress hire</b><span class="n">Lookbook</span></div><small>Evening silk against the treetops</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/reel/Da9ib5rhn2I/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_eyekonik.mp4" poster="img/Da9ib5rhn2I.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Two friends in matching sunglasses"></video></div>
+        <div class="cap"><div class="row"><b>Eyekonik Eyewear</b><span class="n">4,449 views</span></div><small>Your bestie, your best accessory</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DVp2oBRgap-/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/bali_villa.jpg" alt="Inge in a red bikini by a villa pool" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Swimwear</b><span class="n">Bali villa</span></div><small>Poolside in red</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/reel/DQ3l_bBgR5F/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_sway.mp4" poster="img/DQ3l_bBgR5F.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Inge after a brow and lip treatment"></video></div>
+        <div class="cap"><div class="row"><b>Sway Cosmetic Studio</b><span class="n">4,632 views</span></div><small>Fresh brows, fresh lips, no makeup</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DV5alUbAVIp/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/spa_salt.jpg" alt="Inge in a glowing salt wall sauna" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Day spa</b><span class="n">Socials</span></div><small>Salt walls, plunge pools, sauna</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/reel/DMuecWoBAz9/" target="_blank" rel="noopener">
+        <div class="ph"><video class="pv" data-src="vid/vid_ljmarket.mp4" poster="img/DMuecWoBAz9.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Inge shopping a farmers market in Lorna Jane"></video></div>
+        <div class="cap"><div class="row"><b>Lorna Jane</b><span class="n">2,538 views</span></div><small>Market morning, with a discount code</small></div>
+      </a>
+      <a class="card" href="https://www.instagram.com/ingeloock/p/DRylweXgdYC/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DRylweXgdYC.jpg" alt="Inge in Ringers Western denim against a country fence" loading="lazy"></div>
+        <div class="cap"><div class="row"><b>Ringers Western</b><span class="n">878 likes</span></div><small>Too cowgirl to blend in</small></div>
+      </a>
+    </div>
+    <p class="note">Every view on this page is organic, with no paid spend behind it.</p>
+    <div class="cta-row"><p>Got a collection, a drop or a treatment people should see on a real person?</p><a class="btn btn-wine" href="#book" data-pk="The Campaign">Book a shoot</a></div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">Top performers</p>
+        <h2>The numbers, <em>unboosted</em>.</h2>
+      </div>
+      <p class="lede" style="max-width:46ch">Ringers Western and Lorna Jane shared these as collab posts, putting my content straight in front of their own audience. No paid boost, just content filmed to feel natural in their feed. This is what it can do for yours. Add a collab post to any package.</p>
+    </div>
+    <div class="tops">
+      <a class="top" href="https://www.instagram.com/ingeloock/reel/DP0qNLcAW0N/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DP0qNLcAW0N.jpg" alt="" loading="lazy"></div>
+        <div class="num">20.3K<small>Views, Ringers Western collab</small></div>
+        <p><b>Festival fit check.</b> Built around a real event, so the product had a reason to be in the feed.</p>
+      </a>
+      <a class="top" href="https://www.instagram.com/ingeloock/p/DRylweXgdYC/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/rw_flower.jpg" alt="Inge in Ringers Western denim and a white cowboy hat, holding out a flower" loading="lazy"></div>
+        <div class="num">878<small>Likes, 52 comments, Ringers Western collab</small></div>
+        <p><b>Too cowgirl to blend in.</b> Every piece named in the caption, so the post shops like a lookbook.</p>
+      </a>
+      <a class="top" href="https://www.instagram.com/reel/DE4RU0nSCrJ/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DE4RU0nSCrJ.jpg" alt="" loading="lazy"></div>
+        <div class="num">6,640<small>Views, Lorna Jane collab</small></div>
+        <p><b>Matching sets.</b> A bestie format that sells the set twice and gets sent to the friend you'd match with.</p>
+      </a>
+      <a class="top" href="https://www.instagram.com/ingeloock/reel/DQ3l_bBgR5F/" target="_blank" rel="noopener">
+        <div class="ph"><img src="img/DQ3l_bBgR5F.jpg" alt="" loading="lazy"></div>
+        <div class="num">4,632<small>Views, Sway Cosmetic Studio</small></div>
+        <p><b>Wake up done.</b> Pitched at the busy woman who books cosmetic tattoo to save time.</p>
+      </a>
+    </div>
+    <div class="cta-row"><p>Want your brand in front of an audience like this? Add a collab post to any package.</p><a class="btn btn-wine" href="#book">Book a shoot</a></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait"><img src="img/about_hat.jpg" alt="Inge Loock in a white cowboy hat and black singlet" loading="lazy"></div>
+    <div>
+      <p class="label">On set with Inge</p>
+      <h2>Hello, I'm <em>Inge</em>.</h2>
+      <p class="lede">I'm the one laughing between takes, getting the whole table involved and making a shoot feel like the best day out. That energy is what you see on camera. Guests relax, moments happen, and the content feels real because it was.</p>
+      <p class="lede" style="margin-top:18px">Before I pick up a camera, I take the time to understand your brand: who you want to attract, how you want to be seen and what makes you different. Then my eye for aesthetic does the rest. I choose the colours, the outfits, the location, the angles and the energy so every frame looks like it belongs on your feed.</p>
+      <div class="points" style="margin-top:34px">
+        <div class="point point-ph"><span class="th"><img src="img/pt_energy.jpg" alt="Inge in a cowboy hat taking a mirror selfie in a styled home" loading="lazy"></span><div><h3>The energy</h3><p>I bring light, fun and warmth to every set, so your space looks lived in and loved, never staged.</p></div></div>
+        <div class="point point-ph"><span class="th"><img src="img/pt_angles.jpg" alt="Overhead mirror shot of embroidered cowboy boots" loading="lazy"></span><div><h3>The angles</h3><p>I know where the light falls, which corner sells the room and how to frame a plate, a pool or a person at their best.</p></div></div>
+        <div class="point point-ph"><span class="th"><video class="pv" data-src="vid/vid_boots.mp4" poster="img/pt_edit.jpg?v=2" muted loop playsinline autoplay preload="metadata" aria-label="Ringers Western boots kicked up on the Ringers box"></video></span><div><h3>The edit</h3><p>I have the kit and the editing skills to turn a shoot into polished reels, carousels and stills, cut for every platform you post on.</p></div></div>
+      </div>
+      <p class="label facts-head">Fun facts to get to know me</p>
+      <ul class="facts-list">
+        <li>Founder of Studio Loock, a website &amp; branding agency</li>
+        <li>Made in South Africa, based on the Gold Coast</li>
+        <li>Fitness lover, full marathon finisher</li>
+        <li>Safari, snow and salt water obsessed</li>
+        <li>Memories shared with beautiful friends</li>
+        <li>Dog mum to my cute boy Ralphie</li>
+        <li>Sunrise and sunset chaser</li>
+      </ul>
+      <div class="socials">
+        <a class="link" href="https://www.instagram.com/ingeloock/" target="_blank" rel="noopener">Instagram</a>
+        <a class="link" href="https://studioloock.co" target="_blank" rel="noopener">Studio Loock</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="padding-top:0">
+  <div class="wrap why-grid">
+    <div>
+      <p class="label">Why brands book me</p>
+      <h2>I build the websites your ads <em>land on</em>.</h2>
+      <p class="lede">Most creators can film. I also run a branding and web studio, so I think about the whole journey: the moment that stops the scroll, the promise that earns the click, and the page that turns it into a booking.</p>
+      <a class="link" style="display:inline-block;margin-top:30px" href="https://studioloock.co" target="_blank" rel="noopener">Studio Loock, my agency</a>
+    </div>
+    <div class="points">
+      <div class="point"><span class="k">i.</span><div><h3>Briefed like a strategist</h3><p>Before I film, I pin down who the content is for, what they want, and the doubt it has to answer. That's the difference between pretty and profitable.</p></div></div>
+      <div class="point"><span class="k">ii.</span><div><h3>Styled for your feed</h3><p>Wardrobe, light, colour and props chosen to sit inside your brand, so it runs on your grid, your website and your ads without looking borrowed.</p></div></div>
+      <div class="point"><span class="k">iii.</span><div><h3>Hooks you can test</h3><p>Every video ships with multiple openings, so your team keeps the winner running instead of guessing.</p></div></div>
+      <div class="point"><span class="k">iv.</span><div><h3>Ad and page agree</h3><p>I'll tell you if your landing page breaks the promise the video makes. Fewer drop offs between the scroll and the booking.</p></div></div>
+    </div>
+    <div class="cta-row"><p>Content and the page it lands on, from one person who gets your brand.</p><a class="btn btn-wine" href="#book">Book a shoot</a></div>
+  </div>
+</section>
+
+<section id="packages" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">Packages</p>
+        <h2>Ways to <em>work together</em></h2>
+      </div>
+      <p class="lede" style="max-width:44ch">Each package includes concept, scripting, styling, filming, editing and one round of revisions, delivered for you to own and post. Pay your deposit online to lock in your date.</p>
+    </div>
+    <div class="pk-grid">
+      <article class="pk">
+        <div class="pk-top"><div><p class="label">An introduction</p>
+        <h3>The Single</h3></div>
+        <p class="price"><small>from</small>$450</p></div>
+        <p class="pk-sum">One video</p>
+        <ul>
+          <li>One 15 to 60 second video</li>
+          <li>Three opening hooks</li>
+          <li>Captions and on screen text</li>
+          <li>Organic use for three months</li>
+        </ul>
+        <a class="btn" href="#book" data-pk="The Single">Enquire</a>
+        <a class="btn btn-wine pay" data-pay="single" target="_blank" rel="noopener" hidden>Pay deposit</a>
+      </article>
+      <article class="pk feature">
+        <div class="pk-top"><div><p class="label">Best value <em class="orn">♥︎</em></p>
+        <h3>The Campaign</h3></div>
+        <p class="price"><small>from</small>$1,200</p></div>
+        <p class="pk-sum">Three videos and photos</p>
+        <ul>
+          <li>Three videos, three angles</li>
+          <li>Nine hooks to test</li>
+          <li>Ten edited lifestyle photos</li>
+          <li>Paid ad use for three months</li>
+        </ul>
+        <a class="btn" href="#book" data-pk="The Campaign">Enquire</a>
+        <a class="btn btn-wine pay" data-pay="campaign" target="_blank" rel="noopener" hidden>Pay deposit</a>
+      </article>
+      <article class="pk">
+        <div class="pk-top"><div><p class="label">Resorts &amp; hospitality</p>
+        <h3>Stay &amp; Create</h3></div>
+        <p class="price"><small>from</small>$1,500</p></div>
+        <p class="pk-sum">Plus hosted stay or dining</p>
+        <ul>
+          <li>Hero reel and three cutdowns</li>
+          <li>Twenty five edited photos</li>
+          <li>Planned shot list and styling</li>
+          <li>Tagged post on my feed included</li>
+        </ul>
+        <a class="btn" href="#book" data-pk="Stay &amp; Create">Enquire</a>
+        <a class="btn btn-wine pay" data-pay="stay" target="_blank" rel="noopener" hidden>Pay deposit</a>
+      </article>
+      <article class="pk">
+        <div class="pk-top"><div><p class="label">Always on</p>
+        <h3>Monthly</h3></div>
+        <p class="price"><small>from</small>$2,200<small class="per">/mo</small></p></div>
+        <p class="pk-sum">Content every month</p>
+        <ul>
+          <li>Four videos and twelve photos</li>
+          <li>A monthly content plan</li>
+          <li>Performance review each round</li>
+          <li>Priority dates</li>
+        </ul>
+        <a class="btn" href="#book" data-pk="Monthly">Enquire</a>
+        <a class="btn btn-wine pay" data-pay="monthly" target="_blank" rel="noopener" hidden>Pay first month</a>
+      </article>
+    </div>
+    <div class="golive">
+      <div class="golive-head"><p class="label">How your content goes live</p><p class="golive-sub">Every package is UGC made for you to own and post. Want it seen by my audience too? Add a post on my page.</p></div>
+      <div class="golive-grid">
+        <div class="gl"><span class="gl-p">Included</span><h3>UGC for your channels</h3><p>You post it on your website, socials and ads. The content is yours to use for your licence period.</p></div>
+        <div class="gl"><span class="gl-p">+$150</span><h3>Tagged post on my feed</h3><p>I also share it on @ingeloock with you tagged, so my audience discovers you too.</p></div>
+        <div class="gl gl-star"><span class="gl-p">+$300</span><h3>Collab post</h3><p>One post that lives on your profile and mine at the same time, reaching both audiences. It's how my Ringers Western and Lorna Jane posts reached 20.3K and 6,640 views.</p><ul class="gl-list"><li>You approve the reel, with one round of revisions</li><li>I write the caption for you</li><li>We plan the posting time with your team</li></ul></div>
+      </div>
+      <p class="fine" style="margin-top:14px">Posts on my page are always labelled as a paid partnership.</p>
+    </div>
+    <div class="addons">
+      <p class="label">Add ons</p>
+      <span>Raw footage <b>+40%</b></span>
+      <span>Twelve months of ad use <b>+50%</b></span>
+      <span>Whitelisting <b>+30% per month</b></span>
+      <span>Extra hook <b>$75</b></span>
+      <span>72 hour delivery <b>+25%</b></span>
+    </div>
+    <p class="fine">All prices in AUD. A 50% deposit secures your date, with the balance on delivery. Payments are processed securely by Stripe.</p>
+  </div>
+</section>
+
+<section id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><div><p class="label">The process</p><h2>From shoot to <em>live</em> in one to two weeks</h2></div></div>
+    <div class="steps">
+      <div class="step"><span class="n">i.</span><h3>Brief</h3><p>Send the short brief below. I'll reply within one business day with ideas and dates.</p></div>
+      <div class="step"><span class="n">ii.</span><h3>Concept</h3><p>Moodboard, hooks and a shot list for your approval before anything is filmed.</p></div>
+      <div class="step"><span class="n">iii.</span><h3>Shoot</h3><p>On location at your property, venue or around the Gold Coast.</p></div>
+      <div class="step"><span class="n">iv.</span><h3>Deliver</h3><p>Edited photos within one week, edited and captioned videos within one to two weeks, with one round of revisions.</p></div>
+      <div class="step"><span class="n">v.</span><h3>Refine</h3><p>Share your results and I'll plan the next round around what performed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div><p class="label">Questions</p><h2>Good to <em>know</em></h2></div>
+    <div>
+      <details open><summary>What's the difference between UGC and influencer content?</summary><p>UGC is made for your own channels, website and ads, and it isn't tied to my follower count. If you'd also like it shared with my audience, add a tagged post or a collab post to any package.</p></details>
+      <details><summary>Will you post the content on your page too?</summary><p>Only if you'd like me to. A tagged post on my feed is +$150 and a collab post, shared to your profile and mine, is +$300. Collab posts reach both audiences at once, and they're how my Ringers Western and Lorna Jane content reached 20.3K and 6,640 views. With a collab post, you approve the reel first (one round of revisions included), I write the caption, and we plan the posting time together with your team.</p></details>
+      <details><summary>Who owns the content?</summary><p>You receive a licence for the usage in your package, organic or paid, for a set period. Longer usage, raw footage and whitelisting are available as add ons and agreed in writing before the shoot.</p></details>
+      <details><summary>Do you travel for resort and hotel shoots?</summary><p>Yes. South East Queensland and Northern NSW are easy, and I travel interstate and overseas for stays. Accommodation and travel are covered by the property or brand.</p></details>
+      <details><summary>How quickly will I receive my content?</summary><p>Photos are delivered within one week of the shoot, and videos within one to two weeks. Need it sooner for a launch? 72 hour delivery is available as an add on.</p></details>
+      <details><summary>How do I pay?</summary><p>A 50% deposit secures your shoot date, with the balance due on delivery. Pay your deposit online by card through Stripe, or ask for an invoice and pay by bank transfer. Your date is locked in as soon as the deposit lands.</p></details>
+      <details><summary>Can you help with strategy too?</summary><p>That's my day job. If your content needs a sharper message or a brand refresh behind it, I'll shape the concept around what your brand stands for, so every shoot builds the same story.</p></details>
+      <details><summary>Can you help with my website?</summary><p>Yes. I run Studio Loock, a Gold Coast creative studio for branding, websites and SEO. We design and build websites that look like the brand and turn visitors into bookings, from brand new builds to facelifts of an existing site. Pair it with a content shoot and your new site launches with imagery made for it.</p><p><a class="link" href="https://studioloock.co" target="_blank" rel="noopener">Quote a new build or facelift</a></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <p class="label">Book a shoot</p>
+      <h2>Let's create something <em>beautiful</em> that sells.</h2>
+      <p class="lede">Share a few details and your brief goes straight to my inbox. I'll reply within one business day with ideas, dates and a confirmed quote.</p>
+      <div class="mail">
+        <span class="label">Or email me directly</span>
+        <a class="addr" id="addr" href="mailto:inge@studioloock.com">inge@studioloock.com</a>
+        <div class="mail-row">
+          <button class="btn" type="button" id="copyAddr">Copy email</button>
+          <a class="btn btn-wine" href="https://www.instagram.com/ingeloock/" target="_blank" rel="noopener">Message on Instagram</a>
+        </div>
+      </div>
+    </div>
+    <form id="brief" novalidate>
+      <h3>Your <em>brief</em></h3>
+      <div class="row2">
+        <label for="f-brand">Brand or property<input id="f-brand" name="brand" autocomplete="organization" placeholder="The Beach House"></label>
+        <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" placeholder="First and last name"></label>
+      </div>
+      <div class="row2">
+        <label for="f-site">Website or Instagram<input id="f-site" name="site" placeholder="yourbrand.com.au"></label>
+        <label for="f-pk">Package
+          <select id="f-pk" name="pk">
+            <option>Not sure yet</option>
+            <option>The Single</option>
+            <option>The Campaign</option>
+            <option>Stay &amp; Create</option>
+            <option>Monthly</option>
+          </select>
+        </label>
+      </div>
+      <fieldset>
+        <legend>Content for</legend>
+        <div class="opts">
+          <label><input type="checkbox" id="f-o1" value="Paid ads"> Paid ads</label>
+          <label><input type="checkbox" id="f-o2" value="Organic social"> Organic social</label>
+          <label><input type="checkbox" id="f-o3" value="Website"> Website</label>
+          <label><input type="checkbox" id="f-o4" value="Tagged post on @ingeloock"> Tagged post on your feed</label>
+          <label><input type="checkbox" id="f-o5" value="Collab post with @ingeloock"> Collab post</label>
+        </div>
+      </fieldset>
+      <div class="row2">
+        <label for="f-when">Ideal timing<input id="f-when" name="when" placeholder="Before summer"></label>
+        <label for="f-budget">Budget (AUD)<input id="f-budget" name="budget" placeholder="$1,200"></label>
+      </div>
+      <label for="f-notes">What should this content do?<textarea id="f-notes" name="notes" placeholder="Fill midweek rooms, launch our summer menu, more bookings for spa treatments"></textarea></label>
+      <button class="btn btn-wine" type="submit">Prepare my brief</button>
+      <div class="out" id="out" hidden>
+        <pre id="briefText"></pre>
+        <div class="acts">
+          <a class="btn btn-wine" id="mailBtn" href="mailto:inge@studioloock.com">Open in email</a>
+          <button class="btn" type="button" id="copyBrief">Copy brief</button>
+        </div>
+        <p class="status">If your email app doesn't open, copy the brief and send it to inge@studioloock.com.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <a class="logo ft-logo" href="#top">Inge <em>Loock</em><i aria-hidden="true"></i></a>
+        <p class="ft-tag">Content for places people <em>long</em> to be.</p>
+      </div>
+      <div class="ft-social">
+        <a class="ft-ico" href="https://www.instagram.com/ingeloock/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.6-2.2h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span><small>Instagram</small>@ingeloock</span></a>
+        <a class="ft-ico" href="https://studioloock.co" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg><span><small>Studio Loock</small>studioloock.co</span></a>
+      </div>
+    </div>
+    <nav class="ft-nav" aria-label="Footer">
+      <a href="#stays">Stays</a><a href="#hospitality">Hospitality</a><a href="#style">Style</a><a href="#packages">Packages</a><a href="#book">Book a shoot</a>
+    </nav>
+    <div class="ft-base">
+      <span>UGC creator, based on the Gold Coast, Queensland</span>
+      <span>© 2026 Inge Loock <span class="orn">♥︎</span> <a href="mailto:inge@studioloock.com">inge@studioloock.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Videos: loaded as blobs (works on iPhone even when the host doesn't support byte ranges), played when on screen, with a tap-to-play fallback. */
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('video.pv[data-src]'));
+  var cache={};
+  function load(v){
+    if(v._loading) return v._loading;
+    var u=v.getAttribute('data-src');
+    v._loading=(cache[u]||(cache[u]=fetch(u).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(bl){return URL.createObjectURL(bl.type?bl:new Blob([bl],{type:'video/mp4'}))}).catch(function(){return u})))
+      .then(function(src){v.src=src;return v});
+    return v._loading;
+  }
+  function tryPlay(v){
+    v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');
+    var p=v.play();
+    if(p&&p.then)p.then(function(){v.classList.remove('blocked')}).catch(function(){v.classList.add('blocked')});
+  }
+  function show(v){load(v).then(function(){if(v._vis)tryPlay(v)})}
+  vids.forEach(function(v){
+    v.muted=true;
+    var f=v.parentNode;
+    if(f&&getComputedStyle(f).position==='static')f.style.position='relative';
+    var b=document.createElement('button');b.type='button';b.className='vplay';b.setAttribute('aria-label','Play video');
+    b.innerHTML='<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z"/></svg>';
+    b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();v._vis=true;load(v).then(tryPlay)});
+    v.insertAdjacentElement('afterend',b);
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;v._vis=e.isIntersecting;if(e.isIntersecting)show(v);else if(v.src)v.pause();});},{rootMargin:'300px'});
+    vids.forEach(function(v){io.observe(v)});
+  } else vids.forEach(function(v){v._vis=true;show(v)});
+  /* Low Power Mode and some browsers block autoplay until the visitor interacts, so retry on the first touch or scroll. */
+  function kick(){vids.forEach(function(v){if(v._vis&&v.src&&v.paused)tryPlay(v)})}
+  ['touchstart','pointerdown','scroll','keydown'].forEach(function(ev){addEventListener(ev,kick,{passive:true})});
+})();
+/* Stripe Payment Links: paste each link from your Stripe dashboard (https://buy.stripe.com/...) and the Pay buttons appear. */
+var PAY_LINKS = {
+  single: "",
+  campaign: "",
+  stay: "",
+  monthly: ""
+};
+(function(){
+  [].slice.call(document.querySelectorAll('[data-pay]')).forEach(function(a){
+    var url = PAY_LINKS[a.getAttribute('data-pay')];
+    if (url && /^https:\/\/(buy|checkout)\.stripe\.com\//.test(url)) { a.href = url; a.hidden = false; }
+  });
+
+  var sel=document.getElementById('f-pk');
+  [].slice.call(document.querySelectorAll('[data-pk]')).forEach(function(a){
+    a.addEventListener('click',function(){
+      var v=a.getAttribute('data-pk');
+      [].slice.call(sel.options).forEach(function(o){if(o.text===v)sel.value=o.value});
+    });
+  });
+
+  function copy(text,btn,done,targetId){
+    var label=btn.textContent;
+    var ok=function(){btn.textContent=done;setTimeout(function(){btn.textContent=label},1800)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById(targetId));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press copy'};
+    try{navigator.clipboard.writeText(text).then(ok,fallback)}catch(e){fallback()}
+  }
+  document.getElementById('copyAddr').addEventListener('click',function(e){copy('inge@studioloock.com',e.currentTarget,'Copied','addr')});
+
+  var form=document.getElementById('brief');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var uses=[].slice.call(form.querySelectorAll('.opts input:checked')).map(function(i){return i.value}).join(', ');
+    var brand=v('f-brand')||'[Brand]';
+    var text=['Hi Inge,','','We would love to book a content shoot with you.','',
+      'Brand: '+brand,'Contact: '+(v('f-name')||'-'),'Website / Instagram: '+(v('f-site')||'-'),
+      'Package: '+sel.value,'Content for: '+(uses||'-'),'Timing: '+(v('f-when')||'-'),'Budget (AUD): '+(v('f-budget')||'-'),'',
+      'What it should do:',(v('f-notes')||'-'),'','Thank you!'].join('\n');
+    document.getElementById('briefText').textContent=text;
+    document.getElementById('mailBtn').href='mailto:inge@studioloock.com?subject='+encodeURIComponent('Content shoot enquiry: '+brand)+'&body='+encodeURIComponent(text);
+    var out=document.getElementById('out');out.hidden=false;out.scrollIntoView({block:'nearest'});
+  });
+  document.getElementById('copyBrief').addEventListener('click',function(e){copy(document.getElementById('briefText').textContent,e.currentTarget,'Brief copied','briefText')});
+})();
+</script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.count');
+  if(!els.length||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function fmt(el,v){var d=+(el.dataset.dec||0);return (el.dataset.pre||'')+v.toFixed(d)+(el.dataset.suf||'');}
+  els.forEach(function(el){el.textContent=fmt(el,+(el.dataset.from||0));});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting) return; io.unobserve(e.target);
+    var el=e.target,a=+(el.dataset.from||0),z=+el.dataset.to,t0=null,dur=1800;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),k=1-Math.pow(1-p,3);el.textContent=fmt(el,a+(z-a)*k);if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  });},{threshold:.6});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+/* Floating hearts over the hero reel, like a reel being liked */
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.hearts')); if(!boxes.length) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var G=[['#FF5E7E','#FF1446'],['#C13BFF','#FF2D87'],['#FF4F6E','#F50057'],['#A93BFF','#F72585'],['#FF7A59','#FF1F5A']];
+  var n=0;
+  boxes.forEach(function(box){
+    var on=false, right=box.classList.contains('right');
+    function heart(){
+      if(!on||document.hidden) return;
+      var g=G[n++%G.length],id='hg'+n,s=30+Math.random()*22,x=4+Math.random()*14,d=2.4+Math.random()*1.2,w=(Math.random()*24-12)|0;
+      var el=document.createElement('span');
+      el.className='h';
+      el.style.cssText=(right?'right:':'left:')+x+'%;width:'+s+'px;height:'+s+'px;--d:'+d+'s;--w:'+w+'px';
+      el.innerHTML='<svg viewBox="0 0 24 22"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="'+g[0]+'"/><stop offset="1" stop-color="'+g[1]+'"/></linearGradient></defs><path fill="url(#'+id+')" d="M12 21.2l-1.4-1.3C5.4 15.3 2 12.2 2 8.4 2 5.3 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.3 22 8.4c0 3.8-3.4 6.9-8.6 11.5L12 21.2z"/></svg>';
+      box.appendChild(el);
+      setTimeout(function(){el.remove()},d*1000+100);
+    }
+    function loop(){heart(); setTimeout(loop,450+Math.random()*700);}
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){on=es[0].isIntersecting}).observe(box);} else on=true;
+    setTimeout(loop,900);
+  });
+})();
+</script>
+<script>
+(function(){
+  var b=document.querySelector('.menu-btn'),m=document.getElementById('mmenu'); if(!b||!m) return;
+  function set(open){m.hidden=!open;b.setAttribute('aria-expanded',open);b.setAttribute('aria-label',open?'Close menu':'Open menu');document.documentElement.classList.toggle('menu-open',open);}
+  b.addEventListener('click',function(){set(m.hidden)});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus();}});
+  addEventListener('resize',function(){if(innerWidth>900&&!m.hidden)set(false)});
+})();
+</script>
