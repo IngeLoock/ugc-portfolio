@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inge.ugc.studioloock.co/sitemap.xml
