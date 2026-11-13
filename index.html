@@ -1,6 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inge Loock UGC</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Inge Loock is a Gold Coast UGC creator and brand strategist making lifestyle content for resorts, stays, hospitality, fashion and beauty brands.">
+<link rel="canonical" href="https://inge.ugc.studioloock.co/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inge.ugc.studioloock.co/">
+<meta property="og:site_name" content="Inge Loock UGC">
+<meta property="og:title" content="Inge Loock UGC">
+<meta property="og:description" content="Inge Loock is a Gold Coast UGC creator and brand strategist making lifestyle content for resorts, stays, hospitality, fashion and beauty brands.">
+<meta property="og:image" content="https://inge.ugc.studioloock.co/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Inge in a clifftop hot tub at sunset, a jungle resort pool and friends in a villa plunge pool">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F1EEEA">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
@@ -537,6 +558,8 @@ video.blocked + .vplay{display:block}
 .pk .pay{margin-top:-8px}
 .paynote{margin-top:10px;font-size:13px;color:var(--muted);text-align:center}
 </style>
+</head>
+<body>
 
 <nav class="nav" aria-label="Main">
   <div class="wrap">
@@ -1089,8 +1112,10 @@ video.blocked + .vplay{display:block}
         <label for="f-when">Ideal timing<input id="f-when" name="when" placeholder="Before summer"></label>
         <label for="f-budget">Budget (AUD)<input id="f-budget" name="budget" placeholder="$1,200"></label>
       </div>
+      <label for="f-email">Your email<input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@yourbrand.com.au"></label>
       <label for="f-notes">What should this content do?<textarea id="f-notes" name="notes" placeholder="Fill midweek rooms, launch our summer menu, more bookings for spa treatments"></textarea></label>
-      <button class="btn btn-wine" type="submit">Prepare my brief</button>
+      <input type="checkbox" name="botcheck" id="f-bot" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <button class="btn btn-wine" type="submit" id="briefBtn">Prepare my brief</button>
       <div class="out" id="out" hidden>
         <pre id="briefText"></pre>
         <div class="acts">
@@ -1127,15 +1152,24 @@ video.blocked + .vplay{display:block}
 </footer>
 
 <script>
-/* Videos: loaded as blobs (works on iPhone even when the host doesn't support byte ranges), played when on screen, with a tap-to-play fallback. */
+/* Videos: stream from the file when they come near the screen, play when on screen, with a tap-to-play fallback. */
 (function(){
   var vids=[].slice.call(document.querySelectorAll('video.pv[data-src]'));
   var cache={};
+  /* GitHub Pages serves byte ranges, so each video streams straight from its file and starts as soon as
+     the first seconds arrive. If a browser can't play it that way, it falls back to downloading the
+     whole file first and playing that copy (the original approach). */
+  function blobSrc(u){
+    return cache[u]||(cache[u]=fetch(u).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(bl){return URL.createObjectURL(bl.type?bl:new Blob([bl],{type:'video/mp4'}))}).catch(function(){return u}));
+  }
   function load(v){
     if(v._loading) return v._loading;
     var u=v.getAttribute('data-src');
-    v._loading=(cache[u]||(cache[u]=fetch(u).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(bl){return URL.createObjectURL(bl.type?bl:new Blob([bl],{type:'video/mp4'}))}).catch(function(){return u})))
-      .then(function(src){v.src=src;return v});
+    v.addEventListener('error',function(){
+      blobSrc(u).then(function(src){if(src!==u){v.src=src;if(v._vis)tryPlay(v);}});
+    },{once:true});
+    v.src=u;
+    v._loading=Promise.resolve(v);
     return v._loading;
   }
   function tryPlay(v){
@@ -1162,6 +1196,9 @@ video.blocked + .vplay{display:block}
   ['touchstart','pointerdown','scroll','keydown'].forEach(function(ev){addEventListener(ev,kick,{passive:true})});
 })();
 /* Stripe Payment Links: paste each link from your Stripe dashboard (https://buy.stripe.com/...) and the Pay buttons appear. */
+/* Web3Forms access key (free): with a key here the brief also sends straight to inge@studioloock.com.
+   Left blank, the form works as before: it prepares the brief to email or copy. */
+var WEB3FORMS_KEY = "";
 var PAY_LINKS = {
   single: "",
   campaign: "",
@@ -1196,14 +1233,28 @@ var PAY_LINKS = {
     var v=function(id){return document.getElementById(id).value.trim()};
     var uses=[].slice.call(form.querySelectorAll('.opts input:checked')).map(function(i){return i.value}).join(', ');
     var brand=v('f-brand')||'[Brand]';
+    var email=v('f-email');
+    if(WEB3FORMS_KEY){var em=document.getElementById('f-email');em.required=true;if(!em.checkValidity()){em.reportValidity();return;}}
     var text=['Hi Inge,','','We would love to book a content shoot with you.','',
-      'Brand: '+brand,'Contact: '+(v('f-name')||'-'),'Website / Instagram: '+(v('f-site')||'-'),
+      'Brand: '+brand,'Contact: '+(v('f-name')||'-'),'Email: '+(email||'-'),'Website / Instagram: '+(v('f-site')||'-'),
       'Package: '+sel.value,'Content for: '+(uses||'-'),'Timing: '+(v('f-when')||'-'),'Budget (AUD): '+(v('f-budget')||'-'),'',
       'What it should do:',(v('f-notes')||'-'),'','Thank you!'].join('\n');
     document.getElementById('briefText').textContent=text;
     document.getElementById('mailBtn').href='mailto:inge@studioloock.com?subject='+encodeURIComponent('Content shoot enquiry: '+brand)+'&body='+encodeURIComponent(text);
-    var out=document.getElementById('out');out.hidden=false;out.scrollIntoView({block:'nearest'});
+    var out=document.getElementById('out'),status=out.querySelector('.status');out.hidden=false;out.scrollIntoView({block:'nearest'});
+    if(!WEB3FORMS_KEY||document.getElementById('f-bot').checked) return;
+    var btn=document.getElementById('briefBtn');btn.disabled=true;
+    status.textContent='Sending your brief to Inge…';
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:'Content shoot enquiry: '+brand,from_name:v('f-name')||brand,replyto:email,email:email,message:text})})
+      .then(function(r){return r.json()}).then(function(j){
+        if(!j.success) throw 0;
+        status.textContent='Sent. Inge will be in touch soon. Your brief is below if you want a copy.';
+      }).catch(function(){
+        status.textContent="That didn't send from here, so please use Open in email or copy the brief and send it to inge@studioloock.com.";
+      }).then(function(){btn.disabled=false;});
   });
+  if(WEB3FORMS_KEY) document.getElementById('briefBtn').textContent='Send my brief';
   document.getElementById('copyBrief').addEventListener('click',function(e){copy(document.getElementById('briefText').textContent,e.currentTarget,'Brief copied','briefText')});
 })();
 </script>
@@ -1257,3 +1308,5 @@ var PAY_LINKS = {
   addEventListener('resize',function(){if(innerWidth>900&&!m.hidden)set(false)});
 })();
 </script>
+</body>
+</html>
